@@ -1,20 +1,17 @@
 import React from "react";
-
-// Import the model-viewer script
 import "@google/model-viewer";
 
-const ModelViewer = ({ src, alt, ar = true, autoRotate = true, cameraControls = true, width = "100%", height = "400px" }) => {
+const ModelViewer = ({ modelPath }) => {
   return (
     <model-viewer
-      src={src}
-      alt={alt}
-      ar={ar}
-      auto-rotate={autoRotate}
-      camera-controls={cameraControls}
+      src={modelPath}
+      alt="3D model"
+      auto-rotate
+      camera-controls
+      shadow-intensity="1"
       style={{
-        width: width,
-        height: height,
-        backgroundColor: "transparent",
+        width: "400px",
+        height: "400px",
       }}
     ></model-viewer>
   );
